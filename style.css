@@ -669,11 +669,11 @@ button:hover a {
   flex-direction: column;
 }
 
-.jobs_section .ads_section {
+/* .jobs_section .ads_section {
   width: 25%;
   padding: 15rem 0;
   background-color: var(--primary-color);
-}
+} */
 
 .sectionsidetwo .job_container, .sectionsideone .job_container {
   width: 99%;
