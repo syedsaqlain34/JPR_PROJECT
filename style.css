@@ -783,3 +783,15 @@ button:hover a {
 .sectionsidetwo {
   display: none;
 }/*# sourceMappingURL=style.css.map */
+
+.logo {
+  text-decoration: none;
+  width: 6rem;
+}
+
+.logo img {
+  width: 100%;
+}
+
+
+/* signin */

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="signin.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card">
+            <!--LEFTPANEL-->
+            <div class="left">
+
+                <div class="#">
+                <a href="#" class="logo"><img src="images/JPR LOGO.png" alt="logo"></a>
+                    <!-- <img src="images/firststep.png" class="firststep" />
+                    <img src="images/secondstep.png" class="secondstep" />
+                    <img src="images/thirdstep.png" class="thirdstep" /> -->
+                </div>
+                <h1>Creat Your Account</h1>
+
+            </div>
+            <!--RIGHTPANEL-->
+            <div class="right">
+                <!--SIGNIN-->
+                <form id="loginForm" class="formactive">
+                    <h2>SIGN UP</h2>
+                    <div class="input-group">
+                        <input type="text" placeholder="UserName" required>
+                    </div>
+                    <div class="input-grouppassword">
+                        <input type="password" id="SignupPassword" placeholder="Password" required>
+                        <!-- <span onclick="togglePassword('loginPassword')">SHOW</span> -->
+                    </div>
+                    <div class="input-grouppassword">
+                        <input type="password" id="SignupPassword" placeholder="Confirm Password" required>
+                        <!-- <span onclick="togglePassword('loginPassword')">SHOW</span> -->
+                    </div>
+                    <div class="options">
+                        <label><input type="checkbox">Remember me</label>
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <!-- <button class="btn">
+                        Signin</button> -->
+                        <button class="">
+                    <div class="circle">
+                        <img src="images/more-than.png" />
+                    </div>
+                    <a href="#">SIGN UP</a>
+                </button>
+                    <div class="divider">or</div>
+                    <!-- <button class="btn-outline">Signinwithother</button> -->
+                    <p class="switch">
+                        Don’t have an account?
+                        <a href="#" onclick="showRegister()">SignIn</a>
+                    </p>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
