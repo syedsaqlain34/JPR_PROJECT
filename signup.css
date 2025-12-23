@@ -138,14 +138,14 @@ align-items: center;
   }
 }
 
-.logo {
+/* .logo {
   text-decoration: none;
   width: 6rem;
 }
 
 .logo img {
   width: 50%;
-}
+} */
 
 .container {
 width: 95%;
@@ -284,6 +284,18 @@ padding: 14px;
 border-radius: 8px;
 border: 1px solid #ddd;
 outline: none;
+
+}
+
+.input-grouppassword1 input{
+ width: 100%;
+padding: 14px;
+border-radius: 8px;
+border: 1px solid #ddd;
+outline: none;
+margin-top: 15px;
+
+
 }
 
 
