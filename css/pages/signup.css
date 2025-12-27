@@ -356,15 +356,101 @@ color: #0077d9;
 text-decoration: none;
 font-weight: 500;
 }
-/* RESPONSIVE */
+/* ================= RESPONSIVE IMPROVEMENTS ================= */
+
+/* TABLET */
+@media (max-width: 992px) {
+  .container {
+    width: 95%;
+  }
+
+  .left h1 {
+    font-size: 32px;
+    margin-top: 30%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
-.card {
-flex-direction: column;
+  body {
+    padding: 20px 0;
+    align-items: flex-start;
+  }
+
+  .card {
+    flex-direction: column;
+    border-radius: 16px;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    padding: 40px 25px;
+  }
+
+  .left {
+    text-align: center;
+  }
+
+  /* LOGO FIX */
+  .animate_logo {
+    position: relative;
+    width: 8rem;
+    margin: 30px auto 0;
+    padding: 0;
+    left: auto;
+    top: auto;
+    transform: none;
+  }
+
+  .left h1 {
+    font-size: 26px;
+    margin-top: 140px;
+  }
+
+  button {
+    width: 100%;
+  }
 }
-.left, .right {
-width: 100%;
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .left h1 {
+    font-size: 22px;
+    margin-top: 120px;
+  }
+
+  .right {
+    padding: 30px 20px;
+  }
+
+  .options {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  button {
+    height: 3rem;
+  }
+
+  button .circle {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  button .circle img {
+    width: 1.4rem;
+  }
+
+  button a {
+    font-size: 13px;
+    left: 3rem;
+  }
 }
-.left {
-text-align: center;
-}
-}
+
+
