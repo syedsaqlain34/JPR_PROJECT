@@ -345,14 +345,123 @@ text-decoration: none;
 font-weight: 500;
 }
 /* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
+
+/* TABLETS */
+@media (max-width: 992px) {
+  .container {
+    width: 95%;
+  }
+
+  .left h1 {
+    font-size: 32px;
+    margin-top: 30%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+/* MOBILE & SMALL TABLETS */
 @media (max-width: 768px) {
-.card {
-flex-direction: column;
+  body {
+    padding: 20px 0;
+  }
+
+  .card {
+    flex-direction: column;
+    border-radius: 16px;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    padding: 40px 25px;
+  }
+
+  .left {
+    text-align: center;
+  }
+
+  .left h1 {
+    font-size: 26px;
+    margin-top: 180px;
+  }
+
+  /* FIX LOGO POSITION */
+  .animate_logo {
+    position: relative;
+    width: 8rem;
+    margin: 0 auto;
+    padding: 0;
+    top: 0;
+    left: 0;
+  }
+
+  .animate_logo img {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  button a {
+    font-size: 14px;
+  }
 }
-.left, .right {
-width: 100%;
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .left h1 {
+    font-size: 22px;
+    margin-top: 160px;
+  }
+
+  .right {
+    padding: 30px 20px;
+  }
+
+  .input-group input,
+  .input-grouppassword input {
+    padding: 12px;
+  }
+
+  .options {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  button {
+    height: 3rem;
+  }
+
+  button .circle {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  button .circle img {
+    width: 1.4rem;
+  }
+
+  button a {
+    left: 3rem;
+    font-size: 13px;
+  }
 }
-.left {
-text-align: center;
+
+/* FIX LOGO POSITION ON MOBILE */
+@media (max-width: 768px) {
+  .animate_logo {
+    position: relative;   /* remove absolute behavior */
+    top: auto;
+    left: auto;
+    margin: 20px auto 0;  /* push logo slightly down */
+    padding: 0;
+    transform: none;
+  }
 }
-}
+
