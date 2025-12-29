@@ -1,0 +1,21 @@
+{
+  "name": "jpr-project",
+  "version": "1.0.0",
+  "description": "JOB PROCESSING RESOURCE PROJECT FOR LOCAL CLIENT.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syedsaqlain34/JPR_PROJECT.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/syedsaqlain34/JPR_PROJECT/issues"
+  },
+  "homepage": "https://github.com/syedsaqlain34/JPR_PROJECT#readme"
+}

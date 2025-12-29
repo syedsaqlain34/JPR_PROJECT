@@ -26,3 +26,28 @@ document.querySelectorAll("button").forEach(button => {
     setTimeout(() => button.classList.remove("clicked"), 300);
   });
 });
+
+
+// backend code
+
+document.getElementById("loginForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
+
+    const response = await fetch("http://localhost:5000/api/auth/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, password, confirmPassword })
+    });
+
+    const data = await response.json();
+    alert(data.message);
+
+    if (response.ok) {
+        // Optional: redirect to signin page
+        window.location.href = "signin.html";
+    }
+});
