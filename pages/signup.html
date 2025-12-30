@@ -5,53 +5,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignUp</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <link rel="stylesheet" href="../css/pages/signup.css">
+
+    <!-- SMALL FIX STYLE (does NOT break your CSS) -->
+    <style>
+        .input-grouppassword,
+        .input-grouppassword1 {
+            position: relative;
+        }
+
+        .input-grouppassword input,
+        .input-grouppassword1 input {
+            padding-right: 40px; /* space for eye icon */
+        }
+
+        .toggle-eye {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #666;
+            font-size: 16px;
+        }
+    </style>
 </head>
 
 <body>
 
     <div class="container">
         <div class="card">
-            <!--LEFTPANEL-->
-            <div class="left">
 
+            <!-- LEFT PANEL -->
+            <div class="left">
                 <div class="animate_logo">
-                    <!-- <a href="#" class="logo"><img src="images/JPR LOGO.png" alt="logo"></a> -->
                     <img src="../images/firststep.png" class="firststep" />
                     <img src="../images/secondstep.png" class="secondstep" />
                     <img src="../images/thirdstep.png" class="thirdstep" />
                 </div>
                 <h1>Creat Your Account</h1>
-
             </div>
-            <!--RIGHTPANEL-->
+
+            <!-- RIGHT PANEL -->
             <div class="right">
-                <!--SIGNUP-->
+
+                <!-- SIGNUP FORM -->
                 <form id="loginForm" class="formactive">
+>
+
                     <div class="input-group">
-                        <input type="text" id="username" placeholder="UserName" required>
+                        <input type="text"
+                               id="username"
+                               name="username"
+                               placeholder="UserName"
+                               required>
                     </div>
+
                     <div class="input-grouppassword">
-                        <input type="password" id="password" placeholder="Password" required>
+                        <input type="password"
+                               id="password"
+                               name="password"
+                               placeholder="Password"
+                               required>
+
+                        <i class="fa fa-eye toggle-eye"
+                           onclick="togglePassword('password', this)"></i>
                     </div>
+
                     <div class="input-grouppassword1">
-                        <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                        <input type="password"
+                               id="confirmPassword"
+                               name="confirmPassword"
+                               placeholder="Confirm Password"
+                               required>
+
+                        <i class="fa fa-eye toggle-eye"
+                           onclick="togglePassword('confirmPassword', this)"></i>
                     </div>
-                    <button type="submit">
+
+                    <!-- BUTTON (NO <a>, NO SHIFT ISSUE) -->
+                    <button class="butt" type="submit">
                         <div class="circle">
                             <img src="../images/more-than.png" />
                         </div>
-                        <a href="#">SIGN UP</a>
+                        <span class="a">SIGN UP</span>
                     </button>
-                </form>
+                    <p id="msg"></p>
 
+                </form>
 
             </div>
         </div>
     </div>
+
     <script src="../script.js"></script>
-
-
 </body>
 
 </html>

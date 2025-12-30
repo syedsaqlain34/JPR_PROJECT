@@ -170,6 +170,11 @@ button {
   flex-direction: row;
   align-items: center;
   position: relative;
+  
+}
+
+.butt{
+  margin-top: 5%;
 }
 
 button .circle {
@@ -183,15 +188,17 @@ button .circle {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   transition: 0.4s ease-in-out;
   position: relative;
+  
 }
 
 button .circle img {
   position: absolute;
   left: 0.4rem;
   width: 1.8rem;
+  
 }
 
-button a {
+button span.a {
   text-decoration: none;
   color: var(--white-color);
   font-size: 15px;
@@ -201,6 +208,7 @@ button a {
   position: absolute;
   left: 3.2rem;
   transition: 0.4s ease-in-out;
+  
 }
 
 .first_btn {
@@ -214,7 +222,7 @@ button:hover .circle {
   border-radius: 20px;
 }
 
-button:hover a {
+button:hover span.a {
   color: var(--orange-color);
 }
 
@@ -294,10 +302,7 @@ border-radius: 8px;
 border: 1px solid #ddd;
 outline: none;
 margin-top: 15px;
-
-
 }
-
 
 .password {
 position: relative;
@@ -414,6 +419,7 @@ font-weight: 500;
 
   button {
     width: 100%;
+    
   }
 }
 
@@ -436,6 +442,7 @@ font-weight: 500;
 
   button {
     height: 3rem;
+
   }
 
   button .circle {
@@ -452,5 +459,6 @@ font-weight: 500;
     left: 3rem;
   }
 }
+
 
 

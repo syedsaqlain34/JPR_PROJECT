@@ -29,7 +29,7 @@ align-items: center;
   justify-content: center;
   align-items: center;
   padding-top: 40px;
-  margin-top: 5%;
+  margin-top: 10px;
   padding-left: 30%;
 }
 
@@ -138,14 +138,14 @@ align-items: center;
   }
 }
 
-.logo {
+/* .logo {
   text-decoration: none;
   width: 6rem;
 }
 
 .logo img {
   width: 50%;
-}
+} */
 
 .container {
 width: 95%;
@@ -459,7 +459,7 @@ font-weight: 500;
     position: relative;   /* remove absolute behavior */
     top: auto;
     left: auto;
-    margin: 20px auto 0;  /* push logo slightly down */
+    margin: 40px auto 0;  /* push logo slightly down */
     padding: 0;
     transform: none;
   }

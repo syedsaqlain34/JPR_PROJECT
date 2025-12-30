@@ -1,14 +1,23 @@
-let a1 = document.getElementById("about");
-a1.textContent= "Job Processing Resource about page";
-console.log(a1);
+/* ===============================
+   SAFE ABOUT TEXT (NO ERROR)
+================================ */
+const about = document.getElementById("about");
+if (about) {
+  about.textContent = "Job Processing Resource about page";
+  console.log(about);
+}
 
-// signup interactivity
-// Fade-in animation on page load
+/* ===============================
+   PAGE LOAD ANIMATION
+================================ */
 window.addEventListener("load", () => {
-  document.querySelector(".card").classList.add("show");
+  const card = document.querySelector(".card");
+  if (card) card.classList.add("show");
 });
 
-// Input focus animation
+/* ===============================
+   INPUT FOCUS EFFECT
+================================ */
 document.querySelectorAll("input").forEach(input => {
   input.addEventListener("focus", () => {
     input.style.transform = "scale(1.02)";
@@ -19,35 +28,66 @@ document.querySelectorAll("input").forEach(input => {
   });
 });
 
-// Button click ripple effect
+/* ===============================
+   BUTTON CLICK EFFECT
+================================ */
 document.querySelectorAll("button").forEach(button => {
-  button.addEventListener("click", e => {
+  button.addEventListener("click", () => {
     button.classList.add("clicked");
     setTimeout(() => button.classList.remove("clicked"), 300);
   });
 });
 
+/* ===============================
+   PASSWORD SHOW / HIDE (ICON)
+================================ */
+function togglePassword(inputId, icon) {
+  const input = document.getElementById(inputId);
+  if (!input) return;
 
-// backend code
+  if (input.type === "password") {
+    input.type = "text";
+    icon.classList.remove("fa-eye");
+    icon.classList.add("fa-eye-slash");
+  } else {
+    input.type = "password";
+    icon.classList.remove("fa-eye-slash");
+    icon.classList.add("fa-eye");
+  }
+}
 
-document.getElementById("loginForm").addEventListener("submit", async function(e) {
-    e.preventDefault();
+/* ===============================
+   SIGNUP FORM SUBMIT (NO RELOAD)
+================================ */
+const form = document.getElementById("loginForm");
 
-    const username = document.getElementById("username").value;
+if (form) {
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault(); // stop reload
+
+    const username = document.getElementById("username").value.trim();
     const password = document.getElementById("password").value;
     const confirmPassword = document.getElementById("confirmPassword").value;
 
-    const response = await fetch("http://localhost:5000/api/auth/signup", {
+    try {
+      const res = await fetch("/api/auth/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password, confirmPassword })
-    });
+      });
 
-    const data = await response.json();
-    alert(data.message);
+      const data = await res.json();
 
-    if (response.ok) {
-        // Optional: redirect to signin page
+      if (!res.ok) {
+        alert(data.message);
+      } else {
+        alert("Signup successful!");
         window.location.href = "signin.html";
+      }
+
+    } catch (err) {
+      alert("Server error");
+      console.error(err);
     }
-});
+  });
+}
